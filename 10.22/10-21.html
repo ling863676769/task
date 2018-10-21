@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+    .switch-flexbox .d-flex-card {
+/* display 属性规定元素应该生成的框的类型 */
+    display: flex;
+    /* 从顶部向底部垂直布置子元素 */
+    -webkit-box-orient: vertical;
+    /* box-direction属性指定显示哪个方向的box的子元素 默认 */
+    -webkit-box-direction: normal;
+    /* 灵活的项目将垂直显示，正如一个列一样。 */
+    flex-direction: column;
+    width: 100%;
+}
+.d-flex-card {
+    background: #fff;
+    /* 给div元素添加圆角的边框 */
+    border-radius: 5px;
+    /* 设置一个p元素的下边距 */
+    margin-bottom: 1em;
+    /* 设置一个P元素的填充 */
+    padding: 1em;
+
+}
+.d-flex-card-list li {
+    /* 声明设置的列表属性 */
+    list-style: none;
+    width: 100%;
+}
+.d-flex-card-image img {
+    /* 此元素将显示为块级元素，此元素前后会带有换行符 */
+    display: block;
+    /* 默认高度 */
+    height: auto;
+    /* 设置边框属性  */
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+}
+
+    
+    </style>
+</head>
+<body>
+    
+    <div class="d-flex-card">
+        <div class="d-flex-card-image">
+            <img src="picture\1.jpg">
+        </div>
+        <div class="d-flex-card-content">
+            <h3>
+                <trans data-src="First" data-dst="第一">First</trans></h3>
+            <p><trans data-src="I'm a card and I'm first." data-dst="我是一个卡，我是第一个。">I'm a card and I'm first.</trans></p>
+            <a href="#" class="d-flex-card-button">
+                <trans data-src="Button" data-dst="按钮">
+                    Button</trans>
+                </a>
+            </div>
+        </div>
+        
+</body>
+</html>
