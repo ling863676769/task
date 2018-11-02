@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Useful event target example</title>
+    <style>
+      div {
+        background-color: red;
+        height: 100px;
+        width: 25%;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      for(var i = 1; i <= 16; i++) {
+        // 创建一个myDiv元素  参数为div
+        var myDiv = document.createElement('div');
+        // 创建16个div
+        document.body.appendChild(myDiv);
+      }
+      // 创建一个随机函数
+      function random(number) {
+        return Math.floor(Math.random()*number);//返回
+      }
+    // 创建一个函数bgChange
+      function bgChange() {
+        var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        return rndCol;//随机变色函数
+      }
+          //  获取div中的所有元素
+      var divs = document.querySelectorAll('div');
+
+      for(var i = 0; i < divs.length; i++) {
+        divs[i].onclick = function(e) {
+          // 单击触发bgChange函数
+          e.target.style.backgroundColor = bgChange();
+        }
+      }
+    </script>
+  </body>
+</html>
